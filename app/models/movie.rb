@@ -20,6 +20,8 @@ class Movie < ApplicationRecord
 
   has_many(:characters, foreign_key: "movie_id", class_name: "Character")
 
-
+  has_many :characters
+  
+  has_many :cast, through: :characters, source: :actor
 
 end
