@@ -12,4 +12,8 @@
 #
 class Director < ApplicationRecord
   validates(:name, presence: true)
+
+  belongs_to(:filmography, foreign_key: "director_id", class_name: "Movie")
+
+
 end
